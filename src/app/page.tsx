@@ -34,7 +34,7 @@ export default function Home() {
         className="rounded-2xl"
         priority
       />
-      <h1 className="sr-only">PlaylistShazam</h1>
+      <h1 className="sr-only">MyPlaylist</h1>
       <p className="max-w-md text-foreground/70">
         Importe les morceaux que tu as Shazamés et transforme-les
         automatiquement en playlist Spotify, prête à écouter.

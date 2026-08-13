@@ -1,4 +1,4 @@
-# PlaylistShazam
+# MyPlaylist
 
 Transforme les morceaux que tu as Shazamés en playlist Spotify, prête à écouter directement sur le site.
 

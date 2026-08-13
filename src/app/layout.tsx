@@ -13,7 +13,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "PlaylistShazam",
+  title: "MyPlaylist",
   description: "Transforme tes morceaux Shazamés en playlist Spotify",
 };
 
