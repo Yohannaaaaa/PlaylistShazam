@@ -9,7 +9,7 @@ export async function GET(request: NextRequest) {
   const error = url.searchParams.get("error");
   const storedState = request.cookies.get("ps_oauth_state")?.value;
 
-  const base = process.env.NEXT_PUBLIC_BASE_URL ?? "http://localhost:3000";
+  const base = process.env.NEXT_PUBLIC_BASE_URL ?? "http://127.0.0.1:3000";
 
   if (error) {
     return NextResponse.redirect(`${base}/?error=${encodeURIComponent(error)}`);

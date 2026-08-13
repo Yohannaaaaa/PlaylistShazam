@@ -12,7 +12,7 @@ Transforme les morceaux que tu as Shazamés en playlist Spotify, prête à écou
 ## Mise en route
 
 1. Crée une app sur le [dashboard développeur Spotify](https://developer.spotify.com/dashboard) :
-   - Redirect URI : `http://localhost:3000/api/auth/callback`
+   - Redirect URI : `http://127.0.0.1:3000/api/auth/callback` (Spotify n'accepte plus `localhost`, utilise l'IP de bouclage)
 2. Copie `.env.example` en `.env.local` et renseigne `SPOTIFY_CLIENT_ID` / `SPOTIFY_CLIENT_SECRET`.
 3. Installe les dépendances et lance le serveur de dev :
 
@@ -21,7 +21,7 @@ npm install
 npm run dev
 ```
 
-4. Ouvre [http://localhost:3000](http://localhost:3000).
+4. Ouvre [http://127.0.0.1:3000](http://127.0.0.1:3000) (pas `localhost`, pour rester cohérent avec le redirect URI).
 
 ## Stack
 

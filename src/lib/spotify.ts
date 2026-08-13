@@ -10,7 +10,7 @@ const SCOPES = [
 ].join(" ");
 
 function getRedirectUri() {
-  const base = process.env.NEXT_PUBLIC_BASE_URL ?? "http://localhost:3000";
+  const base = process.env.NEXT_PUBLIC_BASE_URL ?? "http://127.0.0.1:3000";
   return `${base}/api/auth/callback`;
 }
 
