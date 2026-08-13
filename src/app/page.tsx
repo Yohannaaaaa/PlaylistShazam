@@ -27,13 +27,14 @@ export default function Home() {
   return (
     <main className="flex flex-1 flex-col items-center justify-center gap-6 px-6 text-center">
       <Image
-        src="/hero.svg"
-        alt="Vinyle stylisé avec des ondes sonores"
-        width={280}
-        height={280}
+        src="/logo.jpg"
+        alt="MyPlaylist"
+        width={260}
+        height={260}
+        className="rounded-2xl"
         priority
       />
-      <h1 className="text-4xl font-bold">PlaylistShazam</h1>
+      <h1 className="sr-only">PlaylistShazam</h1>
       <p className="max-w-md text-foreground/70">
         Importe les morceaux que tu as Shazamés et transforme-les
         automatiquement en playlist Spotify, prête à écouter.
