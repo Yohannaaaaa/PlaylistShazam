@@ -1,6 +1,5 @@
 "use client";
 
-import Image from "next/image";
 import { useEffect, useState } from "react";
 
 type AuthState =
@@ -25,43 +24,42 @@ export default function Home() {
   }, []);
 
   return (
-    <main className="flex flex-1 flex-col items-center justify-center gap-6 px-6 text-center">
-      <Image
-        src="/logo.jpg"
-        alt="MyPlaylist"
-        width={260}
-        height={260}
-        className="rounded-2xl"
-        priority
-      />
+    <main
+      className="flex min-h-screen flex-1 flex-col items-center justify-center gap-6 bg-black bg-contain bg-center bg-no-repeat px-6 text-center"
+      style={{ backgroundImage: "url(/logo.jpg)" }}
+    >
       <h1 className="sr-only">MyPlaylist</h1>
-      <p className="max-w-md text-foreground/70">
-        Importe les morceaux que tu as Shazamés et transforme-les
-        automatiquement en playlist Spotify, prête à écouter.
-      </p>
+      <div className="flex flex-col items-center gap-6 rounded-3xl bg-black/60 px-6 py-8 backdrop-blur-sm">
+        <p className="max-w-md text-white/80">
+          Importe les morceaux que tu as Shazamés et transforme-les
+          automatiquement en playlist Spotify, prête à écouter.
+        </p>
 
-      {auth.status === "loading" && <p className="text-sm">Chargement…</p>}
+        {auth.status === "loading" && (
+          <p className="text-sm text-white/60">Chargement…</p>
+        )}
 
-      {auth.status === "out" && (
-        <a
-          href="/api/auth/login"
-          className="rounded-full bg-[#1DB954] px-6 py-3 font-semibold text-black transition hover:opacity-90"
-        >
-          Se connecter avec Spotify
-        </a>
-      )}
-
-      {auth.status === "in" && (
-        <div className="flex flex-col items-center gap-3">
-          <p>Connecté en tant que {auth.displayName}</p>
+        {auth.status === "out" && (
           <a
-            href="/import"
+            href="/api/auth/login"
             className="rounded-full bg-[#1DB954] px-6 py-3 font-semibold text-black transition hover:opacity-90"
           >
-            Importer mes Shazams
+            Se connecter avec Spotify
           </a>
-        </div>
-      )}
+        )}
+
+        {auth.status === "in" && (
+          <div className="flex flex-col items-center gap-3">
+            <p className="text-white">Connecté en tant que {auth.displayName}</p>
+            <a
+              href="/import"
+              className="rounded-full bg-[#1DB954] px-6 py-3 font-semibold text-black transition hover:opacity-90"
+            >
+              Importer mes Shazams
+            </a>
+          </div>
+        )}
+      </div>
     </main>
   );
 }
