@@ -33,14 +33,14 @@ export default function ImportPage() {
 
   return (
     <main className="mx-auto flex w-full max-w-2xl flex-1 flex-col gap-4 px-6 py-12">
-      <h1 className="text-2xl font-bold">Importer mes Shazams</h1>
+      <h1 className="text-2xl font-bold">Associer mon compte Shazam</h1>
       <p className="text-sm text-foreground/70">
-        Shazam ne propose pas d&apos;export automatique de ton historique.
-        Colle ta liste ci-dessous, un morceau par ligne, au format{" "}
+        Shazam ne propose pas de connexion de compte pour les développeurs,
+        donc l&apos;association se fait manuellement : colle ci-dessous les
+        morceaux de ta bibliothèque Shazam, un par ligne, au format{" "}
         <code className="rounded bg-foreground/10 px-1">Titre - Artiste</code>.
-        (Tu peux retrouver ton historique dans l&apos;app Shazam &rarr; Mes
-        Shazams, ou dans ta bibliothèque Apple Music si elle y est
-        synchronisée.)
+        (Tu les retrouves dans l&apos;app Shazam &rarr; Mes Shazams, ou dans
+        ta bibliothèque Apple Music si elle y est synchronisée.)
       </p>
 
       <form onSubmit={handleSubmit} className="flex flex-col gap-4">
@@ -56,7 +56,7 @@ export default function ImportPage() {
           type="submit"
           className="self-start rounded-full bg-[#1DB954] px-6 py-3 font-semibold text-black transition hover:opacity-90"
         >
-          Continuer
+          Créer ma playlist Spotify
         </button>
       </form>
     </main>

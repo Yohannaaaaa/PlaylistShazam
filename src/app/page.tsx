@@ -55,7 +55,7 @@ export default function Home() {
               href="/import"
               className="rounded-full bg-[#1DB954] px-6 py-3 font-semibold text-black transition hover:opacity-90"
             >
-              Importer mes Shazams
+              Associer mon compte Shazam
             </a>
           </div>
         )}
